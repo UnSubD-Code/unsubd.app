@@ -149,7 +149,7 @@ button[type="submit"]:hover {
   display: flex;
   border-top: 1px solid #1e1e1e;
   margin-top: 8px;
-  text-align: left;
+  text-align: left !important;
 }
 
 .tools-sidebar {
@@ -263,11 +263,11 @@ button[type="submit"]:hover {
   padding: 12px 22px;
   border-radius: 8px;
   background: var(--grad);
-  color: white;
+  color: white !important;
   font-family: inherit;
   font-size: 14px;
   font-weight: 700;
-  text-decoration: none;
+  text-decoration: none !important;
   cursor: default;
   opacity: 0.55;
   align-self: flex-start;
