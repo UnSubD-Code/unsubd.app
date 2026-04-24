@@ -25,6 +25,8 @@ OutputBaseFilename=UnSubD-RustDesk-Setup
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
+WizardImageFile=..\assets\wizard-side.png
+WizardSmallImageFile=..\assets\wizard-small.png
 ; Uncomment and set path to sign the installer:
 ; SignTool=signtool sign /fd SHA256 /tr http://timestamp.sectigo.com /td sha256 /f "cert.pfx" /p "password" $f
 
