@@ -221,6 +221,54 @@ button[type="submit"]:hover {
   display: flex;
 }
 
+.panel-logos {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-box {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.logo-free {
+  background:
+    linear-gradient(#1a1a1a, #1a1a1a) padding-box,
+    var(--grad) border-box;
+  border: 1.5px solid transparent;
+}
+
+.logo-paid {
+  opacity: 0.3;
+}
+
+.logo-paid::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom left,
+    transparent calc(50% - 1.5px),
+    #FF4500 calc(50% - 1.5px),
+    #FF4500 calc(50% + 1.5px),
+    transparent calc(50% + 1.5px)
+  );
+}
+
+.logo-arrow {
+  font-size: 14px;
+  color: #2a2a2a;
+  padding: 0 2px;
+}
+
 .panel-name {
   font-size: 28px;
   font-weight: 700;
