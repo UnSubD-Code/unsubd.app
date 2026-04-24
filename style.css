@@ -230,9 +230,9 @@ button[type="submit"]:hover {
 }
 
 .logo-box {
-  width: 52px;
-  height: 52px;
-  border-radius: 14px;
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
   background: #1a1a1a;
   display: flex;
   align-items: center;
@@ -248,27 +248,23 @@ button[type="submit"]:hover {
   border: 1.5px solid transparent;
 }
 
-.logo-paid {
-  opacity: 0.55;
-}
-
 .logo-paid::after {
   content: '';
   position: absolute;
   inset: 0;
   background: linear-gradient(
     to bottom left,
-    transparent calc(50% - 1.5px),
-    #FF4500 calc(50% - 1.5px),
-    #FF4500 calc(50% + 1.5px),
-    transparent calc(50% + 1.5px)
+    transparent calc(50% - 2px),
+    rgba(255, 69, 0, 0.75) calc(50% - 2px),
+    rgba(255, 69, 0, 0.75) calc(50% + 2px),
+    transparent calc(50% + 2px)
   );
 }
 
 .logo-arrow {
-  font-size: 16px;
-  color: #333;
-  padding: 0 2px;
+  font-size: 18px;
+  color: #555;
+  padding: 0 4px;
   flex-shrink: 0;
 }
 
