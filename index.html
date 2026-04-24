@@ -82,15 +82,36 @@
 
     <p class="stat">Save an average of <span class="highlight">$1,800/year</span>. No subscriptions. Ever.</p>
 
-    <div class="tool-card">
-      <span class="tool-label">First tool available</span>
-      <div class="tool-header">
-        <span class="tool-name">RustDesk</span>
-        <span class="tool-saves">~$180/yr</span>
+    <div class="tools-section">
+
+      <nav class="tools-sidebar">
+        <button class="tool-item active" data-tool="rustdesk">RustDesk</button>
+        <button class="tool-item soon" data-tool="soon">Stirling PDF <span class="soon-tag">soon</span></button>
+        <button class="tool-item soon" data-tool="soon">Syncthing <span class="soon-tag">soon</span></button>
+        <button class="tool-item soon" data-tool="soon">Actual Budget <span class="soon-tag">soon</span></button>
+        <button class="tool-item soon" data-tool="soon">Jellyfin <span class="soon-tag">soon</span></button>
+        <span class="sidebar-footnote">+ 5 more tools coming</span>
+      </nav>
+
+      <div class="tool-panels">
+
+        <div class="tool-panel active" id="panel-rustdesk">
+          <h2 class="panel-name">RustDesk</h2>
+          <p class="panel-desc">Remote into any computer from anywhere. Free forever — no nagware, no session limits, no "commercial use" lockouts.</p>
+          <div class="panel-meta">
+            <div class="meta-row"><span class="meta-label">Replaces</span><span class="meta-value">TeamViewer / AnyDesk</span></div>
+            <div class="meta-row"><span class="meta-label">Saves</span><span class="meta-value highlight">~$180/yr</span></div>
+          </div>
+          <a class="panel-download" href="#" onclick="return false;">Download Installer <span class="coming-soon-tag">coming soon</span></a>
+        </div>
+
+        <div class="tool-panel" id="panel-soon">
+          <p class="panel-soon-text">This tool is coming soon.</p>
+          <p class="panel-soon-sub">Sign up above to be notified when it's ready.</p>
+        </div>
+
       </div>
-      <p class="tool-desc">Remote into any computer from anywhere. Free forever — no nagware, no session limits, no surprise "commercial use" lockouts.</p>
-      <p class="tool-meta">Replaces TeamViewer &amp; AnyDesk</p>
-      <a class="download-btn" href="#" onclick="return false;">Download Installer <span class="coming-soon-tag">coming soon</span></a>
+
     </div>
 
   </main>

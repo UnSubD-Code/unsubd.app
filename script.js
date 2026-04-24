@@ -1,3 +1,23 @@
+// Sidebar tool switcher
+document.querySelectorAll('.tool-item:not(.soon)').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tool-item').forEach(i => i.classList.remove('active'));
+    document.querySelectorAll('.tool-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    const panel = document.getElementById('panel-' + btn.dataset.tool);
+    if (panel) panel.classList.add('active');
+  });
+});
+
+document.querySelectorAll('.tool-item.soon').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tool-item').forEach(i => i.classList.remove('active'));
+    document.querySelectorAll('.tool-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('panel-soon').classList.add('active');
+  });
+});
+
 const form = document.getElementById('email-form');
 const success = document.getElementById('success');
 
