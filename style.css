@@ -249,7 +249,7 @@ button[type="submit"]:hover {
 }
 
 .logo-paid {
-  opacity: 0.3;
+  opacity: 0.55;
 }
 
 .logo-paid::after {
