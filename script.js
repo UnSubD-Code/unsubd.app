@@ -1,20 +1,12 @@
 // Sidebar tool switcher
-document.querySelectorAll('.tool-item:not(.soon)').forEach(btn => {
+document.querySelectorAll('.tool-item').forEach(btn => {
   btn.addEventListener('click', () => {
     document.querySelectorAll('.tool-item').forEach(i => i.classList.remove('active'));
     document.querySelectorAll('.tool-panel').forEach(p => p.classList.remove('active'));
     btn.classList.add('active');
-    const panel = document.getElementById('panel-' + btn.dataset.tool);
+    const panelId = 'panel-' + btn.dataset.tool;
+    const panel = document.getElementById(panelId) || document.getElementById('panel-soon');
     if (panel) panel.classList.add('active');
-  });
-});
-
-document.querySelectorAll('.tool-item.soon').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.tool-item').forEach(i => i.classList.remove('active'));
-    document.querySelectorAll('.tool-panel').forEach(p => p.classList.remove('active'));
-    btn.classList.add('active');
-    document.getElementById('panel-soon').classList.add('active');
   });
 });
 

@@ -98,21 +98,17 @@ Target: 10 tools for Phase 2 launch. Total combined savings: ~$1,500–2,000/yea
 
 ---
 
-### 10. Ditto Clipboard Manager
-**Replaces:** Paid clipboard tools — ~$20+/yr  
-**Plain English:** Remember everything you've copied — search and paste from your full clipboard history.  
-**Why it qualifies:** Built into Windows 11 (Win+V) but hidden. Ditto is more powerful and works on older Windows.  
-**Packaging complexity:** Very low — tiny binary, silent install.  
-**Note:** Low savings number. Consider whether this earns a spot in the MVP 10.  
+### 10. Joplin
+**Replaces:** Evernote — ~$130/yr  
+**Plain English:** Write and organize notes, to-do lists, and notebooks — and actually own your data.  
+**Why it qualifies:** Evernote raised prices aggressively and users are actively looking for alternatives. Joplin is polished, well-maintained, and completely unknown outside tech circles. The anger around Evernote's pricing is fresh and makes for a compelling listing.  
+**Packaging complexity:** Low — has its own Windows installer.  
+**Note:** Syncs via Dropbox/OneDrive/Nextcloud — worth mentioning in the description so users know it's not just local.  
 **Status:** `[ ]`
 
 ---
 
----
+## Retired / Cut Tools
 
-## Candidates to Replace Ditto (if cut)
-
-Ditto has a low savings number and Windows 11 has clipboard history built in. Consider:
-- **ShareX** — screenshots, screen recording, annotations, uploads. Replaces Snagit (~$63/yr). Strong candidate.
-- **Ventoy** — create bootable USB drives for multiple OS installers. More niche.
-- **Bulk Rename Utility** — rename thousands of files with rules. Replaces paid batch renamers.
+- **Ditto Clipboard Manager** — cut. Low savings (~$20/yr) and Windows 11 has clipboard history built in (Win+V). Doesn't clear the bar.
+- **HandBrake** — cut. Too well-known and easy to install on its own.
