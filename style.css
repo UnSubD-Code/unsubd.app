@@ -1,0 +1,167 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #0f0f0f;
+  --text: #ffffff;
+  --muted: #777777;
+  --grad: linear-gradient(135deg, #FF4500, #FF6BCB, #00C3FF);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Trebuchet MS', 'Gill Sans', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 24px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 28px;
+  max-width: 620px;
+  width: 100%;
+}
+
+.logo-wrap {
+  margin-bottom: 4px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 20px;
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #999;
+  background:
+    linear-gradient(var(--bg), var(--bg)) padding-box,
+    var(--grad) border-box;
+  border: 1.5px solid transparent;
+}
+
+h1 {
+  font-size: clamp(26px, 5vw, 40px);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.5px;
+  color: var(--text);
+}
+
+.sub {
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--muted);
+}
+
+.form-wrap {
+  width: 100%;
+  max-width: 500px;
+}
+
+form {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+input[type="email"] {
+  flex: 1;
+  padding: 14px 18px;
+  border-radius: 8px;
+  border: 1.5px solid #2a2a2a;
+  background: #1a1a1a;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s;
+  min-width: 0;
+}
+
+input[type="email"]::placeholder {
+  color: #444;
+}
+
+input[type="email"]:focus {
+  border-color: #FF6BCB;
+}
+
+button[type="submit"] {
+  padding: 14px 24px;
+  border-radius: 8px;
+  border: none;
+  background: var(--grad);
+  color: white;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: opacity 0.2s;
+}
+
+button[type="submit"]:hover {
+  opacity: 0.88;
+}
+
+.success {
+  display: none;
+  margin-top: 16px;
+  font-size: 15px;
+  color: #aaa;
+  letter-spacing: 0.3px;
+}
+
+.success.show {
+  display: block;
+}
+
+.stat {
+  font-size: 14px;
+  color: #444;
+  letter-spacing: 0.3px;
+}
+
+.highlight {
+  background: var(--grad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+footer {
+  margin-top: 60px;
+  font-size: 12px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #333;
+}
+
+@media (max-width: 480px) {
+  form {
+    flex-direction: column;
+  }
+
+  button[type="submit"] {
+    width: 100%;
+  }
+
+  .logo-wrap svg {
+    width: 300px;
+    height: 118px;
+  }
+}
