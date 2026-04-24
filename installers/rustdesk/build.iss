@@ -5,7 +5,7 @@
 ; Output: Output\UnSubD-RustDesk-Setup.exe
 
 #define AppName "RustDesk"
-#define AppVersion "1.3.8"
+#define AppVersion "1.4.6"
 #define AppPublisher "UnSubD"
 #define AppURL "https://unsubd.app"
 #define RustDeskMSI "rustdesk-" + AppVersion + "-x86_64.msi"
@@ -36,57 +36,54 @@ english.WelcomeLabel1=Free remote desktop — replaces TeamViewer
 english.WelcomeLabel2=RustDesk lets you remote into any computer from anywhere.%n%nNo subscriptions. No nagware. Saves you ~$180/year.%n%nThis will install RustDesk on your computer. It may take a moment to download.
 
 [Code]
-
-// Download and silently install RustDesk MSI
-function DownloadAndInstall(): Boolean;
 var
-  TempDir: String;
-  MSIPath: String;
-  ResultCode: Integer;
+  DownloadPage: TDownloadWizardPage;
+
+procedure InitializeWizard;
 begin
-  Result := True;
-  TempDir := ExpandConstant('{tmp}');
-  MSIPath := TempDir + '\{#RustDeskMSI}';
+  DownloadPage := CreateDownloadPage(
+    'Downloading RustDesk',
+    'Saving you ~$180/year. Please wait...',
+    nil
+  );
+end;
 
-  // Show progress page
-  WizardForm.StatusLabel.Caption := 'Downloading RustDesk...';
-
-  // Download the official MSI from GitHub
-  if not DownloadTemporaryFile('{#RustDeskURL}', '{#RustDeskMSI}', '', WizardForm.ProgressGauge) then
-  begin
-    MsgBox('Download failed. Please check your internet connection and try again.', mbError, MB_OK);
-    Result := False;
-    Exit;
-  end;
-
-  WizardForm.StatusLabel.Caption := 'Installing RustDesk...';
-
-  // Run the MSI silently
-  if not Exec('msiexec.exe',
-    '/i "' + MSIPath + '" /quiet /qn /norestart',
-    '', SW_HIDE, ewWaitUntilTerminated, ResultCode) then
-  begin
-    MsgBox('Installation failed (error ' + IntToStr(ResultCode) + '). Please try running the installer again.', mbError, MB_OK);
-    Result := False;
-    Exit;
-  end;
-
-  if ResultCode <> 0 then
-  begin
-    MsgBox('RustDesk installation returned an error (' + IntToStr(ResultCode) + '). It may still have installed correctly — check your Start menu.', mbInformation, MB_OK);
-  end;
+function NextButtonClick(CurPageID: Integer): Boolean;
+begin
+  if CurPageID = wpReady then begin
+    DownloadPage.Clear;
+    DownloadPage.Add('{#RustDeskURL}', '{#RustDeskMSI}', '');
+    DownloadPage.Show;
+    try
+      try
+        DownloadPage.Download;
+        Result := True;
+      except
+        SuppressibleMsgBox(AddPeriod(GetExceptionMessage), mbCriticalError, MB_OK, IDOK);
+        Result := False;
+      end;
+    finally
+      DownloadPage.Hide;
+    end;
+  end else
+    Result := True;
 end;
 
 procedure CurStepChanged(CurStep: TSetupStep);
+var
+  MSIPath: String;
+  ResultCode: Integer;
 begin
-  if CurStep = ssInstall then
-  begin
-    DownloadAndInstall();
+  if CurStep = ssInstall then begin
+    MSIPath := ExpandConstant('{tmp}\{#RustDeskMSI}');
+    if not Exec('msiexec.exe',
+      '/i "' + MSIPath + '" /quiet /qn /norestart',
+      '', SW_HIDE, ewWaitUntilTerminated, ResultCode) then
+    begin
+      MsgBox('Installation failed. Please try running the installer again.', mbError, MB_OK);
+    end else if ResultCode <> 0 then
+    begin
+      MsgBox('RustDesk installation returned code ' + IntToStr(ResultCode) + '. It may still have installed — check your Start menu.', mbInformation, MB_OK);
+    end;
   end;
-end;
-
-// Required for DownloadTemporaryFile
-function InitializeSetup(): Boolean;
-begin
-  Result := True;
 end;
