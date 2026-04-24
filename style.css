@@ -241,6 +241,16 @@ button[type="submit"]:hover {
   overflow: hidden;
 }
 
+.logo-paid {
+  width: 52px;
+  height: 52px;
+}
+
+.logo-paid img {
+  width: 28px;
+  height: 28px;
+}
+
 .logo-free {
   background:
     linear-gradient(#1a1a1a, #1a1a1a) padding-box,
