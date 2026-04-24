@@ -143,6 +143,94 @@ button[type="submit"]:hover {
   font-weight: 700;
 }
 
+.tool-card {
+  width: 100%;
+  max-width: 500px;
+  text-align: left;
+  padding: 24px 28px;
+  border-radius: 14px;
+  background:
+    linear-gradient(#161616, #161616) padding-box,
+    var(--grad) border-box;
+  border: 1.5px solid transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tool-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  background: var(--grad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.tool-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.tool-name {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.tool-saves {
+  font-size: 13px;
+  font-weight: 700;
+  background: var(--grad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  white-space: nowrap;
+}
+
+.tool-desc {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #aaa;
+}
+
+.tool-meta {
+  font-size: 12px;
+  color: #555;
+  letter-spacing: 0.3px;
+}
+
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 22px;
+  border-radius: 8px;
+  background: var(--grad);
+  color: white;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: default;
+  opacity: 0.6;
+  align-self: flex-start;
+}
+
+.coming-soon-tag {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  background: rgba(255,255,255,0.25);
+  padding: 2px 7px;
+  border-radius: 4px;
+}
+
 footer {
   margin-top: 60px;
   font-size: 12px;
