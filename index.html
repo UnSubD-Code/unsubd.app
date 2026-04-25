@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>UnSubD — Free software. No strings.</title>
-  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="stylesheet" href="style.css?v=2">
 </head>
 <body>
 
-  <div class="left-panel">
+  <main>
 
     <div class="logo-wrap">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 165" width="200" height="79">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 165" width="380" height="150">
         <defs>
           <linearGradient id="mainGrad" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" style="stop-color:#FF4500;stop-opacity:1" />
@@ -66,90 +66,88 @@
       </svg>
     </div>
 
-    <nav class="tools-sidebar">
-      <button class="tool-item soon" data-tool="soon">Actual Budget <span class="soon-tag">soon</span></button>
-      <button class="tool-item soon" data-tool="soon">Jellyfin <span class="soon-tag">soon</span></button>
-      <button class="tool-item" data-tool="joplin">Joplin</button>
-      <button class="tool-item active" data-tool="rustdesk">RustDesk</button>
-      <button class="tool-item soon" data-tool="soon">Stirling PDF <span class="soon-tag">soon</span></button>
-      <button class="tool-item soon" data-tool="soon">Syncthing <span class="soon-tag">soon</span></button>
-      <span class="sidebar-footnote">+ 4 more tools coming</span>
-    </nav>
-
-  </div>
-
-  <div class="content-area">
-
     <div class="badge">Under Construction</div>
 
-    <main>
-      <h1>The apps you're paying for every month<br>already exist for free.</h1>
+    <h1>The apps you're paying for every month<br>already exist for free.</h1>
 
-      <p class="sub">We find them, vet them, and make them installable in one click.<br>No terminal. No setup. No confusion.</p>
+    <p class="sub">We find them, vet them, and make them installable in one click.<br>No terminal. No setup. No confusion.</p>
 
-      <div class="form-wrap">
-        <form id="email-form" action="https://formspree.io/f/mjgjljpq" method="POST">
-          <input type="email" name="email" placeholder="your@email.com" required autocomplete="email">
-          <button type="submit">Notify me when we launch</button>
-        </form>
-        <p class="success" id="success">You're on the list. We'll be in touch.</p>
-      </div>
+    <div class="form-wrap">
+      <form id="email-form" action="https://formspree.io/f/mjgjljpq" method="POST">
+        <input type="email" name="email" placeholder="your@email.com" required autocomplete="email">
+        <button type="submit">Notify me when we launch</button>
+      </form>
+      <p class="success" id="success">You're on the list. We'll be in touch.</p>
+    </div>
 
-      <p class="stat">Save an average of <span class="highlight">$1,800/year</span>. No subscriptions. Ever.</p>
-    </main>
+    <p class="stat">Save an average of <span class="highlight">$1,800/year</span>. No subscriptions. Ever.</p>
 
-    <div class="tool-panels">
+    <div class="tools-section">
 
-      <div class="tool-panel active" id="panel-rustdesk">
-        <div class="panel-logos">
-          <div class="logo-box logo-paid" style="background: linear-gradient(145deg, #0E8EE9, #0055B3);">
-            <img src="assets/logos/teamviewer.svg" width="36" height="36" alt="TeamViewer">
+      <nav class="tools-sidebar">
+        <button class="tool-item soon" data-tool="soon">Actual Budget <span class="soon-tag">soon</span></button>
+        <button class="tool-item soon" data-tool="soon">Jellyfin <span class="soon-tag">soon</span></button>
+        <button class="tool-item" data-tool="joplin">Joplin</button>
+        <button class="tool-item active" data-tool="rustdesk">RustDesk</button>
+        <button class="tool-item soon" data-tool="soon">Stirling PDF <span class="soon-tag">soon</span></button>
+        <button class="tool-item soon" data-tool="soon">Syncthing <span class="soon-tag">soon</span></button>
+        <span class="sidebar-footnote">+ 4 more tools coming</span>
+      </nav>
+
+      <div class="tool-panels">
+
+        <div class="tool-panel active" id="panel-rustdesk">
+          <div class="panel-logos">
+            <div class="logo-box logo-paid" style="background: linear-gradient(145deg, #0E8EE9, #0055B3);">
+              <img src="assets/logos/teamviewer.svg" width="36" height="36" alt="TeamViewer">
+            </div>
+            <span class="logo-arrow">→</span>
+            <div class="logo-box logo-free">
+              <img src="assets/logos/rustdesk.svg" width="36" height="36" alt="RustDesk">
+            </div>
           </div>
-          <span class="logo-arrow">→</span>
-          <div class="logo-box logo-free">
-            <img src="assets/logos/rustdesk.svg" width="36" height="36" alt="RustDesk">
+          <h2 class="panel-name">RustDesk</h2>
+          <p class="panel-desc">Remote into any computer from anywhere. Free forever — no nagware, no session limits, no "commercial use" lockouts.</p>
+          <div class="panel-meta">
+            <div class="meta-row"><span class="meta-label">Replaces</span><span class="meta-value">TeamViewer / AnyDesk</span></div>
+            <div class="meta-row"><span class="meta-label">Saves</span><span class="meta-value highlight">~$180/yr</span></div>
           </div>
+          <a class="panel-download" href="#" onclick="return false;">Easy Installer <span class="coming-soon-tag">coming soon</span></a>
         </div>
-        <h2 class="panel-name">RustDesk</h2>
-        <p class="panel-desc">Remote into any computer from anywhere. Free forever — no nagware, no session limits, no "commercial use" lockouts.</p>
-        <div class="panel-meta">
-          <div class="meta-row"><span class="meta-label">Replaces</span><span class="meta-value">TeamViewer / AnyDesk</span></div>
-          <div class="meta-row"><span class="meta-label">Saves</span><span class="meta-value highlight">~$180/yr</span></div>
-        </div>
-        <a class="panel-download" href="#" onclick="return false;">Easy Installer <span class="coming-soon-tag">coming soon</span></a>
-      </div>
 
-      <div class="tool-panel" id="panel-joplin">
-        <div class="panel-logos">
-          <div class="logo-box logo-paid" style="background: linear-gradient(145deg, #00A82D, #007020);">
-            <img src="assets/logos/evernote.svg" width="36" height="36" alt="Evernote">
+        <div class="tool-panel" id="panel-joplin">
+          <div class="panel-logos">
+            <div class="logo-box logo-paid" style="background: linear-gradient(145deg, #00A82D, #007020);">
+              <img src="assets/logos/evernote.svg" width="36" height="36" alt="Evernote">
+            </div>
+            <span class="logo-arrow">→</span>
+            <div class="logo-box logo-free">
+              <img src="assets/logos/joplin.svg" width="36" height="36" alt="Joplin">
+            </div>
           </div>
-          <span class="logo-arrow">→</span>
-          <div class="logo-box logo-free">
-            <img src="assets/logos/joplin.svg" width="36" height="36" alt="Joplin">
+          <h2 class="panel-name">Joplin</h2>
+          <p class="panel-desc">Evernote just raised their prices again. Write and organize your notes without paying monthly — and actually own your data.</p>
+          <div class="panel-meta">
+            <div class="meta-row"><span class="meta-label">Replaces</span><span class="meta-value">Evernote</span></div>
+            <div class="meta-row"><span class="meta-label">Saves</span><span class="meta-value highlight">~$130/yr</span></div>
           </div>
+          <a class="panel-download" href="#" onclick="return false;">Easy Installer <span class="coming-soon-tag">coming soon</span></a>
         </div>
-        <h2 class="panel-name">Joplin</h2>
-        <p class="panel-desc">Evernote just raised their prices again. Write and organize your notes without paying monthly — and actually own your data.</p>
-        <div class="panel-meta">
-          <div class="meta-row"><span class="meta-label">Replaces</span><span class="meta-value">Evernote</span></div>
-          <div class="meta-row"><span class="meta-label">Saves</span><span class="meta-value highlight">~$130/yr</span></div>
-        </div>
-        <a class="panel-download" href="#" onclick="return false;">Easy Installer <span class="coming-soon-tag">coming soon</span></a>
-      </div>
 
-      <div class="tool-panel" id="panel-soon">
-        <p class="panel-soon-text">This tool is coming soon.</p>
-        <p class="panel-soon-sub">Sign up above to be notified when it's ready.</p>
+        <div class="tool-panel" id="panel-soon">
+          <p class="panel-soon-text">This tool is coming soon.</p>
+          <p class="panel-soon-sub">Sign up above to be notified when it's ready.</p>
+        </div>
+
       </div>
 
     </div>
 
-    <footer>
-      <p>Your subscriptions are optional.</p>
-    </footer>
+  </main>
 
-  </div>
+  <footer>
+    <p>Your subscriptions are optional.</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
