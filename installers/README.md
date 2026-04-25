@@ -4,24 +4,29 @@ Each subdirectory contains the Inno Setup script and build notes for one UnSubD-
 
 ## Tooling Required
 
-- **Inno Setup** — free, download from innosetup.org
-- No other dependencies
+- **Inno Setup 6** — free, download from innosetup.org
+- **PowerShell** — for generating branded wizard images (built into Windows)
 
 ## How to Build Any Installer
 
-1. Install Inno Setup
-2. Open the `build.iss` file in the tool's folder
-3. Press `Ctrl+F9` (or Build → Compile) to compile
-4. The output `.exe` will appear in the `Output/` folder (gitignored)
+1. Install Inno Setup 6 from innosetup.org
+2. Run `generate-assets.ps1` if `assets/wizard-side.png` and `assets/wizard-small.png` don't exist
+3. Open the `build.iss` file in the tool's folder
+4. Press `Ctrl+F9` (or Build → Compile) to compile
+5. The output `.exe` will appear in the `Output/` folder (gitignored)
 
 ## Folder Structure
 
 ```
 installers/
-├── README.md          ← this file
+├── README.md              ← this file
+├── generate-assets.ps1    ← generates branded wizard images using .NET System.Drawing
+├── assets/
+│   ├── wizard-side.png    ← 164×314, Inno Setup left panel (dark bg + gradient bar + "Un SubD")
+│   └── wizard-small.png   ← 55×55, Inno Setup header icon
 └── <tool-name>/
-    ├── build.iss      ← Inno Setup script
-    └── build.md       ← tool-specific notes, silent flags, gotchas
+    ├── build.iss          ← Inno Setup script
+    └── build.md           ← tool-specific notes, silent flags, gotchas
 ```
 
 ## Approach
@@ -38,9 +43,9 @@ This keeps our binaries small, ensures users always get the latest version, and 
 
 ## Code Signing
 
-All production installers must be code-signed before public distribution.
-See `docs/brief.md` — Open Issues section for the current status and options.
-Unsigned installers will trigger Windows SmartScreen warnings on Windows 11 24H2+.
+All production installers must be code-signed before public distribution. See `docs/brief.md` — Open Issues section for options and costs.
+
+**Actual SmartScreen behavior (tested on Windows 11):** Unsigned installers show the standard UAC elevation prompt only — no hard SmartScreen block observed. This is better than worst-case, but a code signing cert is still required before sharing publicly to avoid any friction with non-technical users.
 
 ## Output Files
 

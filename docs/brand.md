@@ -111,6 +111,29 @@ The icon SVG path can be embedded inline anywhere — it has no external depende
 
 ---
 
+## Tool Listing Design Pattern
+
+The site uses a sidebar + detail panel layout for browsing tools.
+
+**Sidebar** — 180px wide, tool names only. Active item gets a gradient border and white text. Coming-soon items are muted (#444) with a small "soon" tag. On mobile (<540px) the sidebar collapses to a horizontal scrolling tab strip.
+
+**Detail panel** — Two logo boxes side by side, then tool name, one-line description, "Replaces / Saves" data rows, and a Download button.
+
+**Logo boxes:**
+- Paid app (left, smaller at 52×52px): brand color gradient background, white SVG icon, diagonal orange slash overlay (`rgba(255,69,0,0.75)`)
+- Free app (right, 64×64px): dark `#1a1a1a` background with gradient border, white SVG icon
+
+**Logo files:** Stored locally in `assets/logos/` as SVGs with `fill="white"` set directly in the file. Do not use `cdn.simpleicons.org` — it has been unreliable (returning 403). Always host logo files locally.
+
+**Brand backgrounds for paid app boxes:**
+- TeamViewer: `linear-gradient(145deg, #0E8EE9, #0055B3)`
+- Evernote: `linear-gradient(145deg, #00A82D, #007020)`
+- Add new ones by finding the brand's primary color and creating a slightly darker variant for the gradient end
+
+**Legal note:** Using competitor logos is a trademark gray area. For public launch, consider replacing logo images with styled text labels (e.g., a rounded box with "TeamViewer" in the brand's color). Naming competitors in text copy is generally safe as nominative fair use.
+
+---
+
 ## Do / Don't
 
 | Do | Don't |

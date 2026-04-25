@@ -38,7 +38,7 @@ Omit `/allusers` to install for current user only (installs to AppData).
 
 ## SmartScreen Behavior
 
-Same as RustDesk — unsigned installer will show UAC prompt. No hard SmartScreen block observed in testing on Windows 11. See `installers/rustdesk/build.md` for code signing options.
+Tested on Windows 11 — unsigned installer showed standard UAC prompt only ("allow this app to make changes"). No hard SmartScreen block observed. Same behavior as RustDesk. See `installers/rustdesk/build.md` for code signing options and test results.
 
 ## Known Issues / Gotchas
 

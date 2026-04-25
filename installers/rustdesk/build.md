@@ -16,7 +16,7 @@ Wraps the official RustDesk MSI installer in a clean UnSubD-branded experience. 
 When RustDesk releases a new version:
 
 1. Open `build.iss`
-2. Update `#define AppVersion "1.3.8"` to the new version number
+2. Update `#define AppVersion "1.4.6"` to the new version number
 3. Confirm the MSI filename format matches the GitHub release (check: github.com/rustdesk/rustdesk/releases)
 4. Rebuild
 
@@ -34,15 +34,14 @@ msiexec /i rustdesk.msi /quiet /qn /norestart
 
 ## SmartScreen Behavior (Unsigned)
 
-Without a code signing certificate, Windows will show a SmartScreen warning:
-> "Windows protected your PC — Microsoft Defender SmartScreen prevented an unrecognized app from starting."
+**Tested on Windows 11** — unsigned installer showed the standard UAC elevation prompt ("Do you want to allow this app to make changes to your device?") only. No hard SmartScreen block observed. Users click Yes and the install proceeds normally.
 
-Users must click "More info" → "Run anyway" to proceed. This is a significant friction point for non-technical users.
+This is better than feared. The hard SmartScreen block ("Windows protected your PC") was not triggered. However, this may vary by machine depending on SmartScreen reputation settings. Code signing is still required before public distribution.
 
 **Testing checklist:**
-- [ ] Run on Windows 11 24H2 — document exact SmartScreen experience
-- [ ] Run on Windows 10 — document experience
-- [ ] Confirm RustDesk installs and launches after bypassing warning
+- [x] Run on Windows 11 — standard UAC only, no SmartScreen block
+- [ ] Run on Windows 10 — not yet tested
+- [x] Confirm RustDesk installs and launches after UAC prompt
 - [ ] Confirm uninstall works via Add/Remove Programs
 
 ## Code Signing (Pre-Launch Requirement)

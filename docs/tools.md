@@ -19,8 +19,9 @@ Target: 10 tools for Phase 2 launch. Total combined savings: ~$1,500–2,000/yea
 **Why it qualifies:** TeamViewer is notorious for flagging personal use as "commercial" and locking users out mid-session. AnyDesk charges ~$180/yr. RustDesk is unknown outside tech circles and setup requires comfort with networking concepts.  
 **Packaging complexity:** Low-Medium — official MSI installer supports silent flags. Thin wrapper approach downloads and installs silently.  
 **Note:** Default to public relay servers for non-technical users — self-hosting is optional and not required for basic use.  
-**POC:** Yes — first packaged installer. See `installers/rustdesk/`.  
-**Status:** `[~]`
+**POC:** Yes — first packaged installer. See `installers/rustdesk/`. Tested on Windows 11 — installs cleanly. SmartScreen showed standard UAC prompt only, no hard block.  
+**Live on site:** Yes (active by default in sidebar)  
+**Status:** `[x]`
 
 ---
 
@@ -102,9 +103,10 @@ Target: 10 tools for Phase 2 launch. Total combined savings: ~$1,500–2,000/yea
 **Replaces:** Evernote — ~$130/yr  
 **Plain English:** Write and organize notes, to-do lists, and notebooks — and actually own your data.  
 **Why it qualifies:** Evernote raised prices aggressively and users are actively looking for alternatives. Joplin is polished, well-maintained, and completely unknown outside tech circles. The anger around Evernote's pricing is fresh and makes for a compelling listing.  
-**Packaging complexity:** Low — has its own Windows installer.  
-**Note:** Syncs via Dropbox/OneDrive/Nextcloud — worth mentioning in the description so users know it's not just local.  
-**Status:** `[ ]`
+**Packaging complexity:** Low — has its own Windows installer (~243 MB NSIS installer, downloads during install).  
+**Note:** Syncs via Dropbox/OneDrive/Nextcloud — worth mentioning in the description so users know it's not just local. Sync is opt-in; app is fully functional offline.  
+**Live on site:** Yes  
+**Status:** `[x]`
 
 ---
 

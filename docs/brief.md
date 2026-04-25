@@ -72,10 +72,11 @@ No companion app needed. Windows users are comfortable downloading and running i
 
 ## Go-To-Market Strategy
 
-**Phase 1 — Validate before building**
-- Landing page with value proposition and email signup
-- If signups happen = validated. Build it.
-- If nobody signs up = learned cheaply.
+**Phase 1 — Validate before building** *(in progress)*
+- Landing page with value proposition, email signup, and tool listings — live at unsubd.app
+- Two tools packaged and shown: RustDesk, Joplin
+- Formspree email capture built but form ID not yet activated
+- If signups happen = validated. Build it. If nobody signs up = learned cheaply.
 
 **Phase 2 — MVP Launch**
 - 10 tools fully packaged and installable
@@ -93,8 +94,10 @@ No companion app needed. Windows users are comfortable downloading and running i
 
 ## Open Issues
 
-- **Unsigned .exe problem** — Windows SmartScreen will warn non-technical users. Code signing cert (~$100–400/yr) needed before launch.
+- **Unsigned .exe** — Tested on Windows 11: showed standard UAC prompt only ("allow this app to make changes"), no hard SmartScreen block. Better than feared. Still need a code signing cert (~$100–400/yr) before public distribution to avoid any friction for non-technical users.
+- **Brand logo trademark risk** — Displaying competitor logos (TeamViewer, Evernote, etc.) for comparative use is a legal gray area. Nominative fair use likely protects naming them in text, but logo use is riskier. Plan to replace logo images with styled text labels before public launch.
 - **Free vs. paid split** — not yet defined. Critical product decision.
 - **Licensing compliance** — repackaging open source tools requires a pass on each project's license (GPL, MIT, Apache).
 - **Competitor acknowledgment** — Ninite exists. Differentiation is curation + subscription-replacement framing + non-technical audience focus.
 - **Maintenance burden** — tools update constantly. Packaging strategy needs to account for this (wrap upstream installer vs. fork it).
+- **Formspree not yet activated** — form ID is a placeholder in index.html. No emails are being collected until this is wired up.
