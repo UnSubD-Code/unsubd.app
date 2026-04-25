@@ -1,5 +1,13 @@
 # UnSubD — Social Media Content
 
+## Accounts
+
+| Platform | Handle | URL |
+|---|---|---|
+| X (Twitter) | @UnsubdHQ | https://x.com/UnsubdHQ |
+| Reddit | u/UnSubDHQ | https://www.reddit.com/user/UnSubDHQ/ |
+| Instagram | @unsubd.app | https://www.instagram.com/unsubd.app/ |
+
 ---
 
 ## Strategy Summary

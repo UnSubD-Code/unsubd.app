@@ -23,7 +23,7 @@ Phase 1 — validation landing page is live with tool listings and email capture
 - Honesty box — upfront $19 one-time pricing on the landing page
 - Favicon — `favicon.svg` (icon only, gradient rounded square)
 - Open Graph + Twitter Card meta tags — `og-image.png` live at root
-- Social media accounts: X (@UnsubdHQ), Instagram (@unsubd.app)
+- Social media accounts: X (@UnsubdHQ — https://x.com/UnsubdHQ), Instagram (@unsubd.app — https://www.instagram.com/unsubd.app/), Reddit (u/UnSubDHQ — https://www.reddit.com/user/UnSubDHQ/)
 
 ---
 
