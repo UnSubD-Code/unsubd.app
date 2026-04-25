@@ -31,7 +31,7 @@ Target: 10 tools for Phase 2 launch. Total combined savings: ~$1,500–2,000/yea
 **Why it qualifies:** Acrobat is expensive and overkill for most users. Stirling PDF is a local web app that runs on your machine with a clean UI.  
 **Packaging complexity:** Medium — ships an MSI (v2.10.0). Silent install via standard `/quiet /qn /norestart` flags. Bundles its own Java runtime.  
 **Note:** Launches in browser at localhost:8080. First launch takes 5–10s while server starts. Windows Firewall may prompt — safe to allow.  
-**Live on site:** Yes (sidebar + panel added)  
+**Live on site:** Yes (active in sidebar)  
 **Status:** `[~]` — installer script written, needs build + test on Windows 11
 
 ---
