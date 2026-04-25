@@ -382,6 +382,7 @@ footer {
 @media (max-width: 680px) {
   body {
     flex-direction: column;
+    align-items: center;
   }
 
   .left-panel {
@@ -389,25 +390,31 @@ footer {
     min-height: unset;
     border-right: none;
     border-bottom: 1px solid #1e1e1e;
-    padding: 20px 16px;
-    flex-direction: row;
+    padding: 32px 24px 0;
+    flex-direction: column;
     align-items: center;
-    gap: 16px;
-    flex-wrap: wrap;
+    gap: 0;
   }
 
   .logo-wrap {
-    margin-bottom: 0;
+    margin-bottom: 24px;
     padding-bottom: 0;
     border-bottom: none;
   }
 
+  .logo-wrap svg {
+    width: 300px;
+    height: 118px;
+  }
+
   .tools-sidebar {
+    width: 100%;
     flex-direction: row;
     flex-wrap: nowrap;
     overflow-x: auto;
-    flex: 1;
+    padding: 12px 0;
     gap: 4px;
+    border-top: 1px solid #1e1e1e;
   }
 
   .tool-item {
@@ -420,7 +427,9 @@ footer {
   }
 
   .content-area {
-    padding: 28px 16px 40px;
+    width: 100%;
+    padding: 28px 24px 40px;
+    align-items: center;
   }
 }
 
@@ -434,7 +443,7 @@ footer {
   }
 
   .logo-wrap svg {
-    width: 160px;
-    height: 63px;
+    width: 260px;
+    height: 102px;
   }
 }
