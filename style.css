@@ -297,6 +297,16 @@ button[type="submit"]:hover {
   background: linear-gradient(
     to bottom left,
     transparent calc(50% - 2px),
+    rgba(255, 69, 0, 0.75) calc(50% - 2px),
+    rgba(255, 69, 0, 0.75) calc(50% + 2px),
+    transparent calc(50% + 2px)
+  );
+}
+
+.logo-paid.slash-dark::after {
+  background: linear-gradient(
+    to bottom left,
+    transparent calc(50% - 2px),
     rgba(0, 0, 0, 0.85) calc(50% - 2px),
     rgba(0, 0, 0, 0.85) calc(50% + 2px),
     transparent calc(50% + 2px)
